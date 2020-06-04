@@ -1,0 +1,4 @@
+Ola, sistema realizado pelos alunos Andre Soares Gomes e Saulo de Oliveira.
+
+
+Favor compilar o INDEX.C
