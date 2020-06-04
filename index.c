@@ -18,6 +18,7 @@
 #include ".\include\edita_produto.c"
 #include ".\include\menu_principal.c"
 #include ".\include\opcoes_cadastro.c"
+#include ".\include\comprar_rifa.c"
 #include ".\include\encerra.c"
 #include ".\include\sorteio.c"
 
@@ -66,28 +67,24 @@
 
 	if(opcoes_menu == 2) {
 			
-		
-	cad_cliente();	
-	cad_cliente_opcoes();
+		cad_cliente();	
+		cad_cliente_opcoes();
 
 	}	
 
 
 	
 	if(opcoes_menu == 3) {
-		sorteio();
-		
+		comprar_numero();
+
+	}
+	if(opcoes_menu == 4) {
+		sorteio();	
 		
 	}
 		
-	if(opcoes_menu == 4) {
-	encerra_programa ();
-
-	
-	
-
-	
-		
+	if(opcoes_menu == 5) {
+		encerra_programa ();		
 	}
 
 }	

@@ -63,14 +63,6 @@ void cad_cliente_novo(){
 	printf("\t                                      Digite o cpf dele (somente numeros): ");
 	scanf("%12s", &cpf[j]);
 
-	for(y=0; y<j; y++){
-
-		if(cpf[j] == cpf_cadastrado[y]){
-			printf("cpf ja cadastrado");	
-			goto cpf;
-		}
-	}
-	
 	if (((cpf[j][0]>='0')&&(cpf[j][0]<='9'))&&((cpf[j][1]>='0')&&(cpf[j][1]<='9'))&&((cpf[j][2]>='0')&&(cpf[j][2]<='9'))&&
 	((cpf[j][3]>='0')&&(cpf[j][3]<='9'))&&((cpf[j][4]>='0')&&(cpf[j][4]<='9'))&&((cpf[j][5]>='0')&&(cpf[j][5]<='9'))&&
 	((cpf[j][6]>='0')&&(cpf[j][6]<='9'))&&((cpf[j][7]>='0')&&(cpf[j][7]<='9'))&&((cpf[j][8]>='0')&&(cpf[j][8]<='9'))&&
@@ -89,53 +81,8 @@ void cad_cliente_novo(){
 	}
 
 
-
-
-
-
-
-	printf("\t                                      Numeros disponiveis:");
-	printf("\n");
 	
-
-	cont=0;
-	cont25=0;
-    
-	for (cont = 0; cont < quantidade_rifas; cont++){
-
-        if (cont25 == 25){
-            printf("\n");
-            cont25 = 0;
-        }
-		if (cont < 9){
-			printf("0");
-
-		}
-		printf("%i ", cont+1);
-		cont25 = cont25 + 1;
-
-	}
-		rifa:
-		printf("\n\t                                      Escolha um numero de sorteio: ");
-		fflush(stdin);
-		scanf("%i",&rifa_do_cliente[j]);
-
-		rifas_compradas[j] = rifa_do_cliente[j];
-
-		if(rifa_do_cliente[j] > quantidade_rifas || rifa_do_cliente[j] <= 0){
-			printf("\nRifa invalida\n");
-			goto rifa;
-		}
-		for(y=0; y<j; y++){
-
-			if(rifa_do_cliente[j] == rifas_compradas[y]){
-				printf("Rifa ja comprada");
-				goto rifa;
-			
-			}
-		}
-		fora_for:
-		printf("\n\t                                      Cliente cadastrado!\n");
+		printf("\n\t                                      Cliente cadastrado! O id do cliente e: %d\n", j);
 		printf("\t                                      Deseja cadastrar mais um cliente? <S/N> ");
 		scanf("%s", &cad_continuar);
 		j++;

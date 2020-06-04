@@ -36,12 +36,12 @@ void verifica_cliente(){
 	printf("========================================================================================================================");
 	printf("\n");
 	printf("\t                                   ***Lista de Clientes Cadastrados***                                                 ");
-	printf("\n			                    	Nome,CPF,Endereco e numero escolhido");		
+	printf("\n			                    	Nome,CPF,Endereco,Numero e ID do cliente");		
 	printf("========================================================================================================================");
 	
 	for(i=0; i < total_clientes; i++){
 
-			printf("\n\t                                  %s || %s || %s || %d", nome_cliente [i],cpf[i],endereco_cliente[i],rifa_do_cliente[i]);
+			printf("\n\t                                  %s || %s || %s || %d || %d", nome_cliente [i],cpf[i],endereco_cliente[i],rifa_do_cliente[i],i);
 
 	}
 

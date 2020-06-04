@@ -20,16 +20,18 @@ void menuPrincipal(){
 	printf("\n");
 	printf ("\t                                  2 - Cadastro de cliente \n");
 	printf("\n");
-	printf ("\t                                  3 - Realizar sorteio \n");
+	printf ("\t                                  3 - Comprar Numero \n");
 	printf("\n");
-	printf ("\t                                  4 - ENCERRA O PROGRAMA \n");
+	printf ("\t                                  4 - Realizar sorteio \n");
+	printf("\n");
+	printf ("\t                                  5 - ENCERRA O PROGRAMA \n");
 	printf("\n");
 	printf("========================================================================================================================\n");
 	printf("\n");
 	printf("\t                            Escolha a opcao desejada e precione enter:");
 
 
-	while(!scanf("%d",&opcoes_menu)|| opcoes_menu <=0 || opcoes_menu > 4){		
+	while(!scanf("%d",&opcoes_menu)|| opcoes_menu <=0 || opcoes_menu > 5){		
 
 		while(getchar()!='\n')	
 							
