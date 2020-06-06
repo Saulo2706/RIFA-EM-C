@@ -33,7 +33,7 @@ void sorteio(){
 
 	}
 
-	else if(rifa_do_cliente <= 0){
+	else if(rifa_do_cliente<= 0){
 
 		system ("cls");
 		system("color C0");
@@ -58,31 +58,48 @@ void sorteio(){
 
 	}
 else{
+		
 		system("cls");
+		
 		printf("========================================================================================================================\n");
 		printf("\t                                      ***Bem-Vindo a tela de Sorteio***                                                  ");
 		printf("\n========================================================================================================================\n");
+		srand(time(NULL));
 		z=0;
-		sorteio:
-	
-				srand(time(NULL));
-				faz_sorteio = 1+rand()%quantidade_rifas;
+		
+		for(i=0; i <= 4; i++){
+			sorteio:
 
-			
+			faz_sorteio = 1+rand()%quantidade_rifas;
+			num_sorteados[i] = faz_sorteio;
+			num_ja_sorteados[i] = num_sorteados[i];
 
-				if(faz_sorteio == rifa_do_cliente[z]){
-					printf("\n                                                 Parabens %s voce ganhou um(a) %s", nome_cliente[z], nome_produto);
-					printf("\n                                                 O numero sorteado foi: %i\n", faz_sorteio);
-					system("pause");
-					main();
-				}
-				else{
-					z++;
+			for(y=0; y<i; y++){ 
+				if(num_sorteados[i] == num_ja_sorteados[y]){
 					goto sorteio;				
 				}
-										
-						
-					
-				
+			}
+			for(y=quantidade_rifas; y>i; y--){ 
+				if(num_sorteados[i] == num_ja_sorteados[y]){
+					goto sorteio;				
+				}
+			}
+
+			if(num_sorteados[i] == rifa_do_cliente[z]){
+				printf("\n\t                                 Premio de %d%c lugar recebe um: %s \n", i+1,167, nome_produto[i]);
+				printf("\n\t                                 Numero sorteado: %d \n",num_sorteados[i]);
+				printf("\n\t                                 Nome do Ganhador:%s ", nome_cliente[i]);
+				printf("\n");
+			}
+			else{
+				z++;
+				goto sorteio;			
+			}
+			
+
+		}
+	
 	}
+					system("pause");
+					main();	
 }

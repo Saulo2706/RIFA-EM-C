@@ -81,8 +81,9 @@ void cad_cliente_novo(){
 	}
 
 
-	
+
 		printf("\n\t                                      Cliente cadastrado! O id do cliente e: %d\n", j);
+		id_cliente[j] = j;
 		printf("\t                                      Deseja cadastrar mais um cliente? <S/N> ");
 		scanf("%s", &cad_continuar);
 		j++;

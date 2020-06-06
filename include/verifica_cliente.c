@@ -36,20 +36,20 @@ void verifica_cliente(){
 	printf("========================================================================================================================");
 	printf("\n");
 	printf("\t                                   ***Lista de Clientes Cadastrados***                                                 ");
-	printf("\n			                    	Nome,CPF,Endereco,Numero e ID do cliente");		
+	printf("\n			                   ID do cliente,Nome,CPF,Endereco e Numero escolhido");		
 	printf("========================================================================================================================");
-	
+	printf("\n\t                                  ID || NOME ||     CPF     || ENDERECO E NUMEROS ESCOLHIDOS");
 	for(i=0; i < total_clientes; i++){
-
-			printf("\n\t                                  %s || %s || %s || %d || %d", nome_cliente [i],cpf[i],endereco_cliente[i],rifa_do_cliente[i],i);
+			
+			printf("\n\t                                  %d || %s || %s || %s || %d", id_cliente[i],nome_cliente [i],cpf[i],endereco_cliente[i],rifa_do_cliente[i]);
 
 	}
 
 	
 	printf("\n========================================================================================================================");
 	printf("                                Voltar ao menu principal precione qualquer tecla\n");
-		system("pause");
-			main();
+	system("pause");
+	main();
 
 
 

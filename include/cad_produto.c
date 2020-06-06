@@ -11,12 +11,12 @@
 void cad_produto(){
 	system("cls");	
 	printf("========================================================================================================================\n");
-	printf("\t                                   ***Cadastro de Produto*** \n");
+	printf("\t                                   ***Cadastro de Premio*** \n");
 	printf("========================================================================================================================\n");
 	printf("\n");
-	printf("\t                                  1- Cadastrar um produto novo \n");
+	printf("\t                                  1- Cadastrar um premio novo \n");
 	printf("\n");
-	printf("\t                                  2- Editar produto \n");
+	printf("\t                                  2- Editar os premios \n");
 	printf("\n");
 	printf("\t                                  3- Voltar ao Menu Principal");
 	printf("\n");

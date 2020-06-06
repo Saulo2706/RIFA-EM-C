@@ -37,8 +37,8 @@ void cad_produto_novo() {
 			printf("\t                                   ***Cadastro de Produto Novo*** \n");
 			printf("========================================================================================================================\n");
 			printf("\n");
-			for(i=1; i < 6; i++){
-			printf("\t                                  Digite o nome do produto [%d]: ", i);
+			for(i=0; i <=4 ; i++){
+			printf("\t                                  Digite o nome do produto [%d]: ", i+1);
 			scanf(" %[^\n]s", &nome_produto[i]);
 			printf("\n");
 			}

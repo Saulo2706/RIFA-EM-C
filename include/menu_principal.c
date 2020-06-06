@@ -16,7 +16,7 @@ void menuPrincipal(){
 	printf("\t                                    ***Menu Principal***                                                                ");
 	printf("\n========================================================================================================================\n");
 	printf("\n");
-	printf ("\t                                  1 - Cadastro de produto \n");
+	printf ("\t                                  1 - Cadastro de premios \n");
 	printf("\n");
 	printf ("\t                                  2 - Cadastro de cliente \n");
 	printf("\n");
