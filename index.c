@@ -36,6 +36,7 @@
 	quantidade_rifas=0;
 	total_clientes=0;
 	j=0;
+	cpf_igual=-1;
 	
 
 	

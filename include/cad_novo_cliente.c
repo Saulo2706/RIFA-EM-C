@@ -12,7 +12,7 @@
 
 
 void cad_cliente_novo(){
-//	rifa_do_cliente[TOTAL_VETORES] = 0;
+
 	if (quantidade_rifas == 0){
 		system ("cls");
 		system("color C0");
@@ -37,8 +37,23 @@ void cad_cliente_novo(){
 	}
 
 	else if (j == quantidade_rifas){
-		printf("todas rifas vendidas");
-		system ("pause");
+		system ("cls");
+		system("color C0");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("\n");
+		printf("************************************************************************************************************************");
+		printf("\n                                          TODAS RIFAS VENDIDAS                                                         ");
+		printf("************************************************************************************************************************\n");
+		sleep(4);
 		main();
 
 	}
@@ -62,6 +77,16 @@ void cad_cliente_novo(){
 	cpf:
 	printf("\t                                      Digite o cpf dele (somente numeros): ");
 	scanf("%12s", &cpf[j]);
+	for(y=0; y<j; y++){ 
+		cpf_igual = strcmp(cpf[j], cpf[y]);
+
+		if(cpf_igual == 0){
+			printf("\t                                      CPF JA CADASTRADO POR FAVOR DIGITE NOVAMENTE\n");
+			goto cpf;
+		}
+
+	}
+
 
 	if (((cpf[j][0]>='0')&&(cpf[j][0]<='9'))&&((cpf[j][1]>='0')&&(cpf[j][1]<='9'))&&((cpf[j][2]>='0')&&(cpf[j][2]<='9'))&&
 	((cpf[j][3]>='0')&&(cpf[j][3]<='9'))&&((cpf[j][4]>='0')&&(cpf[j][4]<='9'))&&((cpf[j][5]>='0')&&(cpf[j][5]<='9'))&&

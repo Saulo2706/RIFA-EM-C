@@ -41,7 +41,7 @@ void verifica_cliente(){
 	printf("\n\t                                  ID || NOME ||     CPF     || ENDERECO E NUMEROS ESCOLHIDOS");
 	for(i=0; i < total_clientes; i++){
 			
-			printf("\n\t                                  %d || %s || %s || %s || %d", id_cliente[i],nome_cliente [i],cpf[i],endereco_cliente[i],rifa_do_cliente[i]);
+			printf("\n\t                                  %d || %s || %s || %s || %d, %d, %d", id_cliente[i],nome_cliente [i],cpf[i],endereco_cliente[i],rifa_do_cliente[i][0],rifa_do_cliente[i][1], rifa_do_cliente[i][2]);
 
 	}
 

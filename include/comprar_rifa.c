@@ -82,58 +82,67 @@ void comprar_numero(){
 
 		fora_for:
 		
-
-		printf("\t                                      Numeros disponiveis:");
-		printf("\n");
 		
-
-		cont=0;
-		cont25=0;
-		
-		for (cont = 0; cont < quantidade_rifas; cont++){
-
-			if (cont25 == 25){
-				printf("\n");
-				cont25 = 0;
-			}
-			if (cont < 9){
-				printf("0");
-
-			}
-			printf("%i ", cont+1);
-			cont25 = cont25 + 1;
-
-		}
-			rifa:
-			printf("\n\t                                      Escolha um numero de sorteio: ");
-			fflush(stdin);
-			scanf("%i",&rifa_do_cliente[i]);
-
-			rifas_compradas[i] = rifa_do_cliente[i];
-
-			//OS FOR ABAIXO SERVEM PARA VERIFICAÇÃO DE RIFA
-			if(rifa_do_cliente[i] > quantidade_rifas || rifa_do_cliente[i] <= 0){
-				printf("\nRifa invalida\n");
-				goto rifa;
-			}
-			for(y=0; y<i; y++){ 
-				if(rifa_do_cliente[i] == rifas_compradas[y]){
-					printf("Rifa ja comprada");
-					goto rifa;				
-				}
-			}
-			for(y=100; y>i; y--){ 
-				if(rifa_do_cliente[i] == rifas_compradas[y]){
-					printf("Rifa ja comprada");
-					goto rifa;				
-				}
-			}
+			printf("\t                                      Numeros disponiveis:");
+			printf("\n");
 			
-	
-			printf("\n========================================================================================================================");
-			printf("                                Voltar ao menu principal precione qualquer tecla\n");
-			system("pause");
-			main();
+
+			cont=0;
+			cont25=0;
+			
+			for (cont = 0; cont < quantidade_rifas; cont++){
+
+				if (cont25 == 25){
+					printf("\n");
+					cont25 = 0;
+				}
+				if (cont < 9){
+					printf("0");
+
+				}
+				printf("%i ", cont+1);
+				cont25 = cont25 + 1;
+
+			}
+				rifa:
+				coluna=quantidade_rifas_cliente[i];
+				printf("\n\t                                      Escolha um numero de sorteio: ");
+				fflush(stdin);
+				scanf("%i",&rifa_do_cliente[i][coluna]);
+
+				rifas_compradas[i] = rifa_do_cliente[i][coluna];
+
+				//OS FOR ABAIXO SERVEM PARA VERIFICAÇÃO DE RIFA
+				if(rifa_do_cliente[i][coluna] > quantidade_rifas || rifa_do_cliente[i][coluna] <= 0){
+					printf("\nRifa invalida\n");
+					goto rifa;
+				}
+			
+				for(y=0; y<i; y++){ 
+					if(rifa_do_cliente[i][coluna] == rifas_compradas[y]){
+						printf("Rifa ja comprada");
+						goto rifa;				
+					}
+				}
+		
+			
+				for(y=101; y>i; y--){ 
+					if(rifa_do_cliente[i][coluna] == rifas_compradas[y]){
+						printf("Rifa ja comprada");
+						goto rifa;				
+					}
+				}
+			
+				quantidade_rifas_cliente[i]++;
+				printf("Deseja comprar mais um numero?<S/N>");
+				scanf("%s", &cad_continuar);
+		if(cad_continuar == 's' || cad_continuar == 'S'){
+			goto rifa;
+		}
+		printf("\n========================================================================================================================");
+		printf("                                Voltar ao menu principal precione qualquer tecla\n");
+		system("pause");
+		main();
 	}
 
 }
