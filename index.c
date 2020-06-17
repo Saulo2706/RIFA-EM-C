@@ -195,7 +195,7 @@ void verifica_cliente(){
 	printf("\t                                   ***Lista de Clientes Cadastrados***                                                 ");
 	printf("\n			                   ID do cliente,Nome,CPF,Endereco e Numero escolhido");		
 	printf("========================================================================================================================");
-	printf("\n\t                                  ID || NOME ||     CPF     || ENDERECO E NUMEROS ESCOLHIDOS");
+	printf("\n\t                                  ID || NOME ||     CPF     || ENDERECO");
 	for(i=1; i <= total_clientes; i++){
 			
 			printf("\n\t                                  %d || %s || %s || %s", id_cliente[i],pessoa_cliente[i].nome_do_cliente,pessoa_cliente[i].cpf_do_cliente,pessoa_cliente[i].endereco_do_cliente);
