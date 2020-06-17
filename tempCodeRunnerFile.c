@@ -1,1 +1,1 @@
-total_clientes
+TipoPessoa pessoa_cliente

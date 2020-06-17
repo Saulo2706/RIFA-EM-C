@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "variaveis.c"
+
 void edita_produto() {
 	if(quantidade_rifas == 0){
 		system("color C0");	

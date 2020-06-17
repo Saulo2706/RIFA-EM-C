@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "variaveis.c"
+
 
 void cad_produto_novo() {
 	
